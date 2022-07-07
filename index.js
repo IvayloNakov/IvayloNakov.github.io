@@ -18,6 +18,7 @@ const fs = require('fs/promises');
   }
   
   // main loop loads all pages and then scrapes data
+  while(true){
     try {
       //trying to load as many pages as possible
       await page.waitForFunction("!document.querySelector('.btn').className.includes(' is-loading')")
